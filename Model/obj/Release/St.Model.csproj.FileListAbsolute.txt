@@ -1,0 +1,8 @@
+E:\sf\webPorject\source\ButelUpload\Model\bin\Release\St.Model.dll
+E:\sf\webPorject\source\ButelUpload\Model\bin\Release\St.Model.pdb
+E:\sf\webPorject\source\ButelUpload\Model\obj\Release\St.Model.dll
+E:\sf\webPorject\source\ButelUpload\Model\obj\Release\St.Model.pdb
+E:\sf\webPorject\source\ShengtaoUpload\Model\bin\Release\St.Model.dll
+E:\sf\webPorject\source\ShengtaoUpload\Model\bin\Release\St.Model.pdb
+E:\sf\webPorject\source\ShengtaoUpload\Model\obj\Release\St.Model.dll
+E:\sf\webPorject\source\ShengtaoUpload\Model\obj\Release\St.Model.pdb

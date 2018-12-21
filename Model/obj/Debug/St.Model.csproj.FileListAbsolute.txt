@@ -1,0 +1,15 @@
+E:\sf\webPorject\source\ButelUpload\Model\bin\Debug\St.Model.dll
+E:\sf\webPorject\source\ButelUpload\Model\bin\Debug\St.Model.pdb
+E:\sf\webPorject\source\ButelUpload\Model\obj\Debug\St.Model.dll
+E:\sf\webPorject\source\ButelUpload\Model\obj\Debug\St.Model.pdb
+E:\sf\webPorject\source\ShengtaoUpload\Model\bin\Debug\St.Model.dll
+E:\sf\webPorject\source\ShengtaoUpload\Model\bin\Debug\St.Model.pdb
+E:\sf\webPorject\source\ShengtaoUpload\Model\obj\Debug\St.Model.dll
+E:\sf\webPorject\source\ShengtaoUpload\Model\obj\Debug\St.Model.pdb
+E:\sf\webPorject\source\ShengtaoUpload\Model\obj\Debug\St.Model.csprojResolveAssemblyReference.cache
+E:\个人资料\圣陶工作\ShengtaoUpload\ShengtaoUpload\Model\bin\Debug\St.Model.dll
+E:\个人资料\圣陶工作\ShengtaoUpload\ShengtaoUpload\Model\bin\Debug\St.Model.pdb
+E:\个人资料\圣陶工作\ShengtaoUpload\ShengtaoUpload\Model\obj\Debug\St.Model.csproj.CoreCompileInputs.cache
+E:\个人资料\圣陶工作\ShengtaoUpload\ShengtaoUpload\Model\obj\Debug\St.Model.dll
+E:\个人资料\圣陶工作\ShengtaoUpload\ShengtaoUpload\Model\obj\Debug\St.Model.pdb
+E:\个人资料\圣陶工作\ShengtaoUpload\ShengtaoUpload\Model\obj\Debug\St.Model.csprojResolveAssemblyReference.cache

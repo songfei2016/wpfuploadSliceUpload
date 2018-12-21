@@ -1,0 +1,110 @@
+﻿<mah:MetroWindow x:Class="St.Upload.View.ResourceDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:St.Upload.View"
+        xmlns:common="clr-namespace:St.Common;assembly=St.Common"
+        mc:Ignorable="d"
+        x:Name="ResourceDetailView"
+        ResizeMode="NoResize"
+        Topmost="True"
+        Title="资源详情" Height="600" Width="850">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <mah:MetroWindow.Resources>
+        <ResourceDictionary>
+            <common:DateToStringConverter x:Key="DateToStringConverter"></common:DateToStringConverter>
+
+        </ResourceDictionary>
+    </mah:MetroWindow.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid Width="550" Height="450" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Row="0" Grid.Column="0">
+                    <Label >序号</Label>
+                </DockPanel>
+                <DockPanel Grid.Row="0" Grid.Column="1">
+                    <TextBlock Text="{Binding Id, Mode=OneWay,UpdateSourceTrigger=PropertyChanged }"></TextBlock>
+                </DockPanel>
+
+                <DockPanel Grid.Row="1" Grid.Column="0">
+                    <Label >资源名称</Label>
+                </DockPanel>
+                <DockPanel Grid.Row="1" Grid.Column="1">
+                    <TextBlock Text="{Binding Name, Mode=OneWay,UpdateSourceTrigger=PropertyChanged }"></TextBlock>
+                </DockPanel>
+
+                <DockPanel Grid.Row="2" Grid.Column="0">
+                    <Label >添加时间</Label>
+                </DockPanel>
+                <DockPanel Grid.Row="2" Grid.Column="1">
+                    <TextBlock Text="{Binding AddTime, Mode=OneWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource DateToStringConverter} }"></TextBlock>
+                </DockPanel>
+
+                <DockPanel Grid.Row="3" Grid.Column="0">
+                    <Label >上传状态</Label>
+                </DockPanel>
+                <DockPanel Grid.Row="3" Grid.Column="1">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                         HorizontalAlignment="Left" Height="22" Width="22"
+                        ToolTip="MaterialDesignFloatingActionMiniLightButton">
+                        <materialDesign:PackIcon Kind="{Binding Status}" Height="20" Width="20" />
+                    </Button>
+                </DockPanel>
+
+
+                <DockPanel Grid.Row="4" Grid.Column="0">
+                    <Label >文件地址</Label>
+                </DockPanel>
+                <DockPanel Grid.Row="4" Grid.Column="1">
+                    <!--<TextBlock Text="{Binding FilePath, Mode=OneWay,UpdateSourceTrigger=PropertyChanged }"></TextBlock>-->
+                    <TextBox Text="{Binding FilePath, Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" IsReadOnly="True"></TextBox>
+                </DockPanel>
+
+                <DockPanel Grid.Row="5" Grid.Column="0">
+                    <Label >上传时间</Label>
+                </DockPanel>
+                <DockPanel Grid.Row="5" Grid.Column="1">
+                    <TextBlock Text="{Binding UploadTime, Mode=OneWay,UpdateSourceTrigger=PropertyChanged ,Converter={StaticResource DateToStringConverter}}"></TextBlock>
+                </DockPanel>
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</mah:MetroWindow>

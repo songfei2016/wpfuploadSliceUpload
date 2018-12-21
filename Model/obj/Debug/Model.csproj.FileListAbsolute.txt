@@ -1,0 +1,4 @@
+E:\sf\webPorject\source\ButelUpload\Model\bin\Debug\Model.dll
+E:\sf\webPorject\source\ButelUpload\Model\bin\Debug\Model.pdb
+E:\sf\webPorject\source\ButelUpload\Model\obj\Debug\Model.dll
+E:\sf\webPorject\source\ButelUpload\Model\obj\Debug\Model.pdb

@@ -1,0 +1,110 @@
+﻿2017-05-15 16:12:04> Program: Starting Squirrel Updater: 
+2017-05-15 18:16:53> Program: Starting Squirrel Updater: --releasify=E:\临时文件\st.upload.1.0.0.nupkg --no-msi
+2017-05-15 18:16:53> Program: Bootstrapper EXE found at:.\Setup.exe
+2017-05-15 18:16:53> Program: Creating release package: E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\st.upload.1.0.0.nupkg
+2017-05-15 18:16:53> ReleasePackage: Creating release package: E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\st.upload.1.0.0.nupkg => E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\st.upload-1.0.0-full.nupkg
+2017-05-15 18:16:54> ReleasePackage: Extracting dependent packages: []
+2017-05-15 18:16:54> ReleasePackage: Removing unnecessary data
+2017-05-15 18:16:54> ReleasePackage: No release notes found in C:\Users\Administrator\AppData\Local\SquirrelTemp\tempa\st.upload.nuspec
+2017-05-15 18:16:56> Program: Building embedded zip file for Setup.exe
+2017-05-15 18:35:13> Program: Starting Squirrel Updater: --releasify=E:\myapp\圣陶教育文件上传.1.0.1.nupkg --no -mis
+2017-05-15 18:35:13> Program: Bootstrapper EXE found at:.\Setup.exe
+2017-05-15 18:35:13> Program: Creating release package: E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传.1.0.1.nupkg
+2017-05-15 18:35:13> ReleasePackage: Creating release package: E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传.1.0.1.nupkg => E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传-1.0.1-full.nupkg
+2017-05-15 18:35:13> ReleasePackage: Extracting dependent packages: []
+2017-05-15 18:35:13> ReleasePackage: Removing unnecessary data
+2017-05-15 18:35:13> ReleasePackage: No release notes found in C:\Users\Administrator\AppData\Local\SquirrelTemp\tempa\圣陶教育文件上传.nuspec
+2017-05-15 18:35:14> DeltaPackageBuilder: Extracting .\Releases\st.upload-1.0.0-full.nupkg and E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传-1.0.1-full.nupkg into C:\Users\Administrator\AppData\Local\SquirrelTemp\tempb
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Autofac.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\DeltaCompressionDotNet.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\DeltaCompressionDotNet.MsDelta.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\DeltaCompressionDotNet.PatchApi.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\MahApps.Metro.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\MaterialDesignColors.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\MaterialDesignThemes.Wpf.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.Prism.Composition.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.Prism.Interactivity.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.Prism.Mvvm.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.Prism.PubSubEvents.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Microsoft.Practices.ServiceLocation.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Mono.Cecil.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Mono.Cecil.Mdb.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Mono.Cecil.Pdb.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Mono.Cecil.Rocks.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Newtonsoft.Json.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Prism.Autofac.Wpf.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Prism.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Prism.Wpf.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Serilog.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Serilog.Sinks.File.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Serilog.Sinks.RollingFile.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\Splat.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Common.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Model.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Upload.application hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Upload.exe hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Upload.exe.config hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Upload.exe.manifest hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\St.Upload_ExecutionStub.exe hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\System.Windows.Interactivity.dll hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\UserData\UploadData.json hasn't changed, writing dummy file
+2017-05-15 18:35:15> DeltaPackageBuilder: \lib\net45\UserData\UserInfo.json hasn't changed, writing dummy file
+2017-05-15 18:35:15> Program: Building embedded zip file for Setup.exe
+2017-05-15 18:35:16> Unhandled exception: System.AggregateException: 发生一个或多个错误。 ---> System.Exception: Failed to compile WiX template, command invoked was: 'candle.exe -nologo -ext WixNetFxExtension -out "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wixobj" "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs"'
+
+Output was:
+Setup.wxs
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(39) : error CNDL0014 : The Component/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(41) : error CNDL0014 : The File/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(67) : error CNDL0014 : The ComponentRef/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+   在 Squirrel.Update.Program.<createMsiPackage>d__22.MoveNext()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   在 System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   在 System.Threading.Tasks.Task.Wait()
+   在 Squirrel.Update.Program.Releasify(String package, String targetDir, String packagesDir, String bootstrapperExe, String backgroundGif, String signingOpts, String baseUrl, String setupIcon, Boolean generateMsi)
+   在 Squirrel.Update.Program.executeCommandLine(String[] args)
+   在 Squirrel.Update.Program.main(String[] args)
+---> (内部异常 #0) System.Exception: Failed to compile WiX template, command invoked was: 'candle.exe -nologo -ext WixNetFxExtension -out "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wixobj" "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs"'
+
+Output was:
+Setup.wxs
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(39) : error CNDL0014 : The Component/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(41) : error CNDL0014 : The File/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(67) : error CNDL0014 : The ComponentRef/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+   在 Squirrel.Update.Program.<createMsiPackage>d__22.MoveNext()<---
+
+2017-05-15 18:37:40> Program: Starting Squirrel Updater: --releasify=E:\myapp\圣陶教育文件上传.1.0.1.nupkg --no -mis
+2017-05-15 18:37:40> Program: Bootstrapper EXE found at:.\Setup.exe
+2017-05-15 18:37:40> Program: Creating release package: E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传.1.0.1.nupkg
+2017-05-15 18:37:40> ReleasePackage: Creating release package: E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传.1.0.1.nupkg => E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\圣陶教育文件上传-1.0.1-full.nupkg
+2017-05-15 18:37:40> ReleasePackage: Extracting dependent packages: []
+2017-05-15 18:37:40> ReleasePackage: Removing unnecessary data
+2017-05-15 18:37:40> ReleasePackage: No release notes found in C:\Users\Administrator\AppData\Local\SquirrelTemp\tempa\圣陶教育文件上传.nuspec
+2017-05-15 18:37:42> Program: Building embedded zip file for Setup.exe
+2017-05-15 18:37:42> Unhandled exception: System.AggregateException: 发生一个或多个错误。 ---> System.Exception: Failed to compile WiX template, command invoked was: 'candle.exe -nologo -ext WixNetFxExtension -out "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wixobj" "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs"'
+
+Output was:
+Setup.wxs
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(39) : error CNDL0014 : The Component/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(41) : error CNDL0014 : The File/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(67) : error CNDL0014 : The ComponentRef/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+   在 Squirrel.Update.Program.<createMsiPackage>d__22.MoveNext()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   在 System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   在 System.Threading.Tasks.Task.Wait()
+   在 Squirrel.Update.Program.Releasify(String package, String targetDir, String packagesDir, String bootstrapperExe, String backgroundGif, String signingOpts, String baseUrl, String setupIcon, Boolean generateMsi)
+   在 Squirrel.Update.Program.executeCommandLine(String[] args)
+   在 Squirrel.Update.Program.main(String[] args)
+---> (内部异常 #0) System.Exception: Failed to compile WiX template, command invoked was: 'candle.exe -nologo -ext WixNetFxExtension -out "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wixobj" "E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs"'
+
+Output was:
+Setup.wxs
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(39) : error CNDL0014 : The Component/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(41) : error CNDL0014 : The File/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+E:\sf\webPorject\source\ButelUpload\packages\squirrel.windows.1.5.2\tools\Releases\Setup.wxs(67) : error CNDL0014 : The ComponentRef/@Id attribute's value, '圣陶教育文件上传.exe', is not a legal identifier.  Identifiers may contain ASCII characters A-Z, a-z, digits, underscores (_), or periods (.).  Every identifier must begin with either a letter or an underscore.
+   在 Squirrel.Update.Program.<createMsiPackage>d__22.MoveNext()<---
+

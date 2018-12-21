@@ -1,0 +1,77 @@
+﻿<mah:MetroWindow x:Class="St.Upload.MainView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:prism="http://www.codeplex.com/prism"
+                 xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                    xmlns:common="clr-namespace:St.Common;assembly=St.Common"
+                 mc:Ignorable="d"
+                 FontSize="15"
+                 MinHeight="650"
+                 MinWidth="800"
+                 Height="650"
+                 Width="800"
+                 Title="圣陶文件上传客户端"
+                 WindowStartupLocation="CenterScreen"
+                 IgnoreTaskbarOnMaximize="True"
+                 ShowTitleBar="False"
+                 ShowMaxRestoreButton="False"
+                 ShowMinButton="False"
+                 ShowCloseButton="True"
+               
+                 ResizeMode="NoResize"
+                 Topmost="False"
+                 IsWindowDraggable="False"
+                 >
+
+
+
+    <Grid x:Name="Upload" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" x:Name="FileList">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"  />
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="90*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="选择" Grid.Column="0" Click="BtnSelectFile" Margin="5 5" Width="100" />
+                <TextBox x:Name="txtName" Grid.Column="2" Text="{Binding Path=FileName, Mode=TwoWay}" Visibility="Hidden"></TextBox>
+                <Button Content="开始" Grid.Column="1"  Click="BtnStart" Width="100"/>
+            </Grid>
+
+        </StackPanel>
+
+        <md:Card Grid.Row="1" Background="{StaticResource MaterialDesignBackground}" VerticalAlignment="Stretch" Margin="0 8 0 0">
+            <DataGrid x:Name="GridUploadFiles" CanUserAddRows="False" FontSize="15" ColumnWidth="Auto" ItemsSource="{Binding FilesList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="序号" Binding="{Binding Id,Mode=TwoWay}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="文件名" Binding="{Binding FileName,Mode=TwoWay}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="添加时间" Binding="{Binding AddTime,Mode=TwoWay}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="状态" Binding="{Binding Status,Mode=TwoWay}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="操作"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </md:Card>
+
+        <StackPanel Grid.Row="2">
+            <TextBox x:Name="txtStartTime"></TextBox>
+            <TextBox x:Name="txtEndTime"></TextBox>
+            <Label>下载地址：</Label>
+            <TextBox x:Name="txtUrl"></TextBox>
+        </StackPanel>
+
+    </Grid>
+
+</mah:MetroWindow>

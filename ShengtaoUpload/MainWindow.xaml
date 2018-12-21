@@ -1,0 +1,171 @@
+﻿<mah:MetroWindow x:Class="St.Upload.MainWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                 xmlns:common="clr-namespace:St.Common;assembly=St.Common"
+                 xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                 mc:Ignorable="d"
+                 FontSize="15"
+                 Height="650"
+                 ResizeMode="NoResize"
+                 Width="900"
+                 Title="资源列表"
+                 Topmost="False"
+                 >
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+        <!--<i:EventTrigger EventName="Sorting">
+            <i:InvokeCommandAction Command="{Binding SortingCommand}"></i:InvokeCommandAction>
+        </i:EventTrigger>-->
+    </i:Interaction.Triggers>
+   
+
+    <mah:MetroWindow.Resources>
+        <ResourceDictionary>
+            <common:DateToStringConverter x:Key="DateToStringConverter"></common:DateToStringConverter>
+            <common:BoolToStringConverter x:Key="BoolToStringConverter"></common:BoolToStringConverter>
+            <common:LongStringConverter x:Key="LongStringConverter"></common:LongStringConverter>
+            <common:EnableOrNotConverter x:Key="EnableOrNotConverter"></common:EnableOrNotConverter>
+            <common:ReUploadEnableOrNotConverter x:Key="ReUploadEnableOrNotConverter"></common:ReUploadEnableOrNotConverter>
+        </ResourceDictionary>
+    </mah:MetroWindow.Resources>
+
+    <Grid x:Name="ResourceList" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left">
+            <Button Content="搜索" IsDefault="True" Command="{Binding QueryCommand}"></Button>
+            <TextBox x:Name="SourceName" md:HintAssist.Hint="资源名称" Width="150" Text="{Binding SourceName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+        </DockPanel>
+
+        <DockPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right">
+            <Button Name="BtnRefresh" HorizontalAlignment="Right" BorderBrush="Transparent"  Background="Transparent" ToolTip="刷新" Command="{Binding RefreshCommand}">
+                <md:PackIcon Kind="Refresh"></md:PackIcon>
+            </Button>
+        </DockPanel>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="{StaticResource MaterialDesignBackground}" VerticalAlignment="Stretch">
+            <DataGrid x:Name="GridUploadFiles" 
+                      CanUserAddRows="False" 
+                      CanUserSortColumns="True"
+                      FontSize="15" 
+                      ColumnWidth="Auto" 
+                      AutoGenerateColumns="False" 
+                      ItemsSource="{Binding ResourceList}"
+                      SelectedItem="{Binding SelectedResource}"
+             
+                    
+                      >
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MaterialDesignDataGridCell}">
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.Header>
+                            <Button x:Name="Id"  Content="序号"  BorderBrush="Transparent"  Background="Transparent" ></Button>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Id}" Width="50"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.Header>
+                            <Button x:Name="Name" Content="资源名称" BorderBrush="Transparent"  Background="Transparent" Click="ButtonBase_OnClick"></Button>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Name,Converter={StaticResource LongStringConverter}}" ToolTip="{Binding Name}"  MinWidth="60" MaxWidth="120"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.Header>
+                            <Button x:Name="UploadStatus" Content="是否已上传" BorderBrush="Transparent"  Background="Transparent" Click="ButtonBase_OnClick"></Button>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding UploadStatus,Converter={StaticResource BoolToStringConverter}}" Width="50"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.Header>
+                            <Button x:Name="AddTime" Content="添加时间" BorderBrush="Transparent"  Background="Transparent" Click="ButtonBase_OnClick"></Button>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding AddTime,Converter={StaticResource DateToStringConverter}}" Width="150"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="上传" Command="{Binding GotoUpload}" IsEnabled="{Binding UploadStatus,Converter={StaticResource EnableOrNotConverter}}"  Width="80"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="重传" Command="{Binding ReGotoUpload}" IsEnabled="{Binding UploadStatus,Converter={StaticResource ReUploadEnableOrNotConverter}}" Width="80"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="详情" Command="{Binding GotoDetail}" Width="80"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="278*"></ColumnDefinition>
+                <ColumnDefinition Width="178*"></ColumnDefinition>
+                <ColumnDefinition Width="67*"></ColumnDefinition>
+                <ColumnDefinition Width="138*"></ColumnDefinition>
+                <ColumnDefinition Width="143*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Width="100" HorizontalAlignment="Right" Height="Auto" Margin="0,4" Command="{Binding PrePageCommand}">上一页</Button>
+            <Button  Grid.Column="1" Width="100" HorizontalAlignment="Left" Height="Auto" Margin="5,4" Command="{Binding NextPageCommand}">下一页</Button>
+            <TextBox  Grid.Column="2" Width="50" HorizontalAlignment="Left" TextAlignment="Center" Text="{Binding PageIndex,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button  Grid.Column="3" Width="100" HorizontalAlignment="Left" Height="Auto" Margin="0,4" Command="{Binding GoToPageCommand}">Go</Button>
+            <DockPanel Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="60">
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center">共</Label>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding TotalPage,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center">页</Label>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</mah:MetroWindow>
